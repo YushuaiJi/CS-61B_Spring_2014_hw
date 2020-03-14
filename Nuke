@@ -1,0 +1,15 @@
+package lab1;
+import java.io.*;
+import java.lang.*; 
+
+public class Nuke2 {
+	//public StringBuffer deleteCharAt(int indexpoint) ;
+	public static void main(String[] arg) throws Exception{
+		BufferedReader keybd = new BufferedReader(new InputStreamReader(System.in));
+		//System.out.println(keybd.readLine()); readLine 这里写过一次之后，下面那行读的就是下一行
+		String s=keybd.readLine(); 
+		StringBuilder str = new StringBuilder(s);	
+		 str.deleteCharAt(1);		
+		 System.out.println(str);
+		}
+}
