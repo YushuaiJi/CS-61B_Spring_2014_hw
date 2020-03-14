@@ -1,0 +1,45 @@
+package lab1;
+import java.net.*;
+import java.io.*;
+import java.util.*;
+
+	class OpenCommercial {
+
+	  /** Prompts the user for the name X of a company (a single string), opens
+	   *  the Web site corresponding to www.X.com, and prints the first five lines
+	   *  of the Web page in reverse order.
+	   *  @param arg is not used.
+	   *  @exception Exception thrown if there are any problems parsing the 
+	   *             user's input or opening the connection.
+	   */
+	  public static void main(String[] arg) throws Exception {
+
+	    BufferedReader keyboard;
+	    String inputLine;
+	    int i;
+
+	    keyboard = new BufferedReader(new InputStreamReader(System.in));
+
+	    System.out.print("Please enter the name of a company (without spaces): ");
+	    System.out.flush();        /* Make sure the line is printed immediately. */
+	    inputLine = keyboard.readLine();
+
+	    /* Replace this comment with your solution.  */
+		    URL u = new URL("https://www."+inputLine+".gov/");
+		    InputStream ins = u.openStream();
+		    InputStreamReader isr = new InputStreamReader(ins);
+		    BufferedReader whitehouse = new BufferedReader(isr);
+		    String R1 = whitehouse.readLine();
+		    String R2 = whitehouse.readLine();
+		    String R3 = whitehouse.readLine();
+		    String R4 = whitehouse.readLine();
+		    String R5 = whitehouse.readLine();
+		    System.out.print(R5);
+		    System.out.print(R4);
+		    System.out.print(R3);
+		    System.out.print(R2);
+		    System.out.print(R1);
+		    
+		    
+	             }   	  
+	        }   
